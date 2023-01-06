@@ -37,7 +37,7 @@
                 <form:form id="student-form" action="/${isNewStudent ? 'new' : 'edit/'}${isNewStudent ? '' : student.id}" method="post" modelAttribute="student">
                     <div class="form-field">
                         <form:label path="name" class="form-label">Name</form:label>
-                        <form:input required="required" path="name" placeholder="Bryan Soong" id="form-input-name" class="form-input"/>
+                        <form:input required="required" path="name" placeholder="Bryan Soong" maxlength="45" id="form-input-name" class="form-input"/>
                     </div>
                     
                     <div class="form-field">
@@ -56,17 +56,17 @@
 
                     <div class="form-field">
                         <form:label path="email" class="form-label">Email</form:label>
-                        <form:input required="required" path="email" type="email" placeholder="bryansoong35@gmail.com" id="form-input-email" class="form-input"/>
+                        <form:input required="required" path="email" type="email" placeholder="bryansoong35@gmail.com" maxlength="45" id="form-input-email" class="form-input"/>
                     </div>
 
                     <div class="form-field">
                         <form:label path="mobile" class="form-label">Mobile</form:label>
-                        <form:input required="required" path="mobile" placeholder="+60172603164" type="text" pattern="^(\+\d{1,3})\d{10}" id="form-input-mobile" class="form-input"/>
+                        <form:input required="required" path="mobile" placeholder="+60172603164" type="text" maxlength="15" pattern="^(\+\d{1,3})\d{10}" id="form-input-mobile" class="form-input"/>
                     </div>
                     
                     <div class="form-field">
                         <form:label path="address" class="form-label">Address</form:label>
-                        <form:textarea required="required" rows="3" cols="45" path="address" id="form-input-address" class="form-input"/>
+                        <form:textarea required="required" rows="3" cols="45" path="address" maxlength="45" id="form-input-address" class="form-input"/>
                     </div>
                 </form:form>
             </div>

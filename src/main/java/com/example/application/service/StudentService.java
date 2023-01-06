@@ -29,8 +29,10 @@ public class StudentService {
         studentRepository.save(student);
     }
 
-    public void delete(int id) {
+    public Student delete(int id) {
+        Student student = getStudentById(id);
         studentRepository.deleteById(id);
+        return student;
     }
 
     public void update(Student student, int id) {

@@ -20,11 +20,14 @@
                 <a class="add-btn" href="/new">New Student</a>
             </div>
             <c:if test="${status}">
-                <div class="banner">
+                <div class="banner ${wasDeleted ? 'red' : wasModified ? 'blue' : 'green'}">
                     The student&nbsp<span style="font-weight: 700;">${studentName}</span>&nbspwas succesfully
                     <c:choose>
                         <c:when test="${wasModified}">
                             updated
+                        </c:when>
+                        <c:when test="${wasDeleted}">
+                            deleted
                         </c:when>
                         <c:otherwise>
                             added

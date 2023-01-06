@@ -29,9 +29,14 @@ public class StudentController {
     
     /* Delete Operation */
     @GetMapping("/delete/{id}")
-    public ModelAndView deleteStudentView(@PathVariable("id") int id) {
-        studentService.delete(id);
-        return new ModelAndView("redirect:/");
+    public String deleteStudentView(@PathVariable("id") int id, RedirectAttributes attributes) {        
+        // Delete student from db        
+        Student student = studentService.delete(id);
+
+        attributes.addFlashAttribute("status", true);
+        attributes.addFlashAttribute("wasDeleted", true);
+        attributes.addFlashAttribute("studentName", student.getName());
+        return "redirect:/";
     }
 
     /* Edit View */

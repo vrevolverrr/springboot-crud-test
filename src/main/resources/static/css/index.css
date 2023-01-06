@@ -76,10 +76,20 @@ body {
 
     border-radius: 15px;
 
-    background-color: #53d37e;
-
     font-size: 16px;
     font-weight: 500;
+}
+
+.green {
+    background-color: #53d37e;
+}
+
+.red {
+    background-color: #db7171;
+}
+
+.blue {
+    background-color: #8099df;
 }
 
 /* Search bar */
